@@ -1,6 +1,6 @@
 {
+  "homepage": "https://natalia-ponomarenko.github.io/auth-form-test",
   "name": "auth-form-test",
-  "homepage": "https://github.com/natalia-ponomarenko/auth-form-test",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

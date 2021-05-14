@@ -1,0 +1,66 @@
+@import './vars';
+
+@mixin flex-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-centered-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin flex-start {
+  display: flex;
+  align-self: flex-start;
+  align-items: center;
+}
+
+@mixin flex-baselined {
+  display: flex;
+  align-items: baseline;
+}
+
+@mixin continue-button {
+  margin: 25px 0 30px;
+  width: $main-elements-width;
+  height: 48px;
+  font-weight: $font-bold;
+  font-size: 1.3em;
+  line-height: 1.26em;
+  background: $accent-continue-button-color;
+  color: $main-color;
+  border-style: none;
+  border-radius: 3px;
+}
+
+@mixin button {
+  position: relative;
+  margin-top: 16px;
+  width: $main-elements-width;
+  height: 44px;
+  border: 1px solid $border-color;
+  border-radius: 4px;
+  background-color: $main-color;
+}
+
+@mixin button-picture {
+  left: 14px;
+  top: 9px;
+  content: "";
+  position: absolute ;
+  width: 28px;
+  height: 28px;
+}
+
+@mixin text-button-hover {
+  color:$accent-color;
+  cursor: pointer;
+}

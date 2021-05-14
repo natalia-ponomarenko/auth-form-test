@@ -1,37 +1,32 @@
 .form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include flex-centered-column;
 
   &__input {
-    width: 264px;
-    height: 40px;
     margin-top: 14px;
     padding: 10px 8px;
-    color: #929BAD;
-    border: 1px solid #CDD7E5;
-    box-sizing: border-box;
+    width: $main-elements-width;
+    height: 40px;
+    border: 1px solid $border-color;
     border-radius: 4px;
+    color: $input-color;
   }
 
   &__forgot-password {
     margin: 24px 0 26px 0;
     font-size: 1.14em;
-    line-height: 26px;
-    color: #2856AE;
+    line-height: 1.36em;
+    color: $bright-color;
       &:hover {
-        color:#00308D;
+        color: $accent-color;
         cursor: pointer;
       }
   }
 
   &__checkbox {
-    display: flex;
-    align-self: flex-start;
-    align-items: center;
-    font-size: 16px;
-    line-height: 19px;
-    color: #2B3151;
+    @include flex-start;
+    font-size: 1.14em;
+    line-height: 1em;
+    color: $checkbox-color;
   }
 
   &__checkmark {
@@ -41,18 +36,9 @@
   }
 
   &__button {
-    background: #3EBF8A;
-    border-radius: 3px;
-    width: 264px;
-    height: 48px;
-    border-style: none;
-    color: #fff;
-    margin: 25px 0 30px;
-    font-weight: 500;
-    font-size: 1.3em;
-    line-height: 24px;
+    @include continue-button;
       &:hover {
-        background: #008960;
+        background: $continue-button-color;
       }
   }
 }

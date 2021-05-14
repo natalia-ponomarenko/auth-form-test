@@ -1,64 +1,49 @@
 .card {
-  border: 1px solid #E2E9F3;
-  border-radius: 6px;
+  @include flex-centered-column;
   margin-top: 80px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 360px;
-  background-color: #FFFFFF;
+  width: $main-full-width;
+  border: 1px solid $main-border-color;
+  background-color: $main-color;
+  border-radius: 6px;
 
   &__title {
-    font-weight: 500;
-    font-size: 1.71em;
     margin-top: 24px;
-    color: #2B3151;
-    line-height: 32px;
+    font-size: 1.71em;
+    font-weight: $font-bold;
+    line-height: 1.7em;
+    color: $checkbox-color;
   }
   
   &__subtitle-wrapper {
-    display: flex;
-    align-items: baseline;
+    @include flex-baselined;
     margin-bottom: 8px;
   }
 
   &__subtitle {
-    color: #2B3151;
     margin-top: 10px;
-    line-height: 26px;
+    line-height: 1.37em;
+    color: $checkbox-color;
   }
   
   &__sign-button {
-    border-style: none;
-    background-color: #FFFFFF;
     margin-left: 5px;
-    color: #2856AE;
+    border-style: none;
+    background-color: $main-color;
+    color: $bright-color;
   }
 
   &__button-wrapper {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
   }
 
   &__button-google,
   &__button-microsoft {
-    position: relative;
-    width: 264px;
-    height: 44px;
-    border: 1px solid #CDD7E5;
-    border-radius: 4px;
-    background-color: #FFFFFF;
-    margin-top: 16px;
+    @include button;
   }
 
   &__button-google::after,
   &__button-microsoft::after {
-    left: 14px;
-    top: 9px;
-    content: "";
-    position: absolute ;
-    width: 28px;
-    height: 28px;
+    @include button-picture;
   }
   
   &__button-google::after {
@@ -72,7 +57,7 @@
   &__button-text,
   &__button-text--microsoft {
     font-size: 1em;
-    color: #2856AE;
+    color: $bright-color;
   }
 
   &__button-text--microsoft {
@@ -82,26 +67,25 @@
   &__button-text:hover,
   &__button-text--microsoft:hover,
   &__sign-button {
-    color:#00308D;
-    cursor: pointer;
+    @include text-button-hover;
   }
 
   &__decoration {
     position: relative;
     top: 20px;
     height: 1px;
-    width: 244px;
-    background-color: #E2E9F3;
+    width: $main-elements-width;
+    background-color: $main-border-color;
     border-radius: 1px;
     z-index: 1;
   }
 
   &__middle-paragraph {
+    margin-bottom: 5px;
     padding: 0 10px;
     font-size: 1.28em;
-    color: #8C93A3;
-    background: #fff;
-    margin-bottom: 5px;
+    color: $half-dark-color;
+    background: $main-color;
     z-index: 2;
   }
 }

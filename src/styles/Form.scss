@@ -1,108 +1,58 @@
 .form {
-  border: 1px solid #E2E9F3;
-  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-  &__card {
-    margin-top: 80px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 360px;
-    background-color: #FFFFFF;
-  }
-
-  &__title {
-    font-weight: 500;
-    font-size: 1.71em;
-    margin-top: 24px;
-    color: #2B3151;
-    line-height: 32px;
-  }
-  
-  &__subtitle-wrapper {
-    display: flex;
-    align-items: baseline;
-    margin-bottom: 20px;
-  }
-
-  &__subtitle {
-    color: #2B3151;
-    margin-top: 10px;
-    line-height: 26px;
-  }
-  
-  &__sign-button {
-    border-style: none;
-    background-color: #FFFFFF;
-    margin-left: 5px;
-    color: #2856AE;
-  }
-
-  &__button-wrapper {
-    display: flex;
-    flex-direction: column;
-  }
-
-  &__button-google,
-  &__button-microsoft {
-    position: relative;
-    width: 244px;
-    height: 44px;
+  &__input {
+    width: 264px;
+    height: 40px;
+    margin-top: 14px;
+    padding: 10px 8px;
+    color: #929BAD;
     border: 1px solid #CDD7E5;
+    box-sizing: border-box;
     border-radius: 4px;
-    background-color: #FFFFFF;
-    margin-top: 16px;
   }
 
-  &__button-google::after,
-  &__button-microsoft::after {
-    left: 14px;
-    top: 9px;
-    content: "";
-    position: absolute ;
-    width: 28px;
-    height: 28px;
-  }
-  
-  &__button-google::after {
-    background: url("../images/Google__G__Logo.svg"); 
-  }
-
-  &__button-microsoft::after {
-    background: url("../images/Microsoft_logo11.svg");
-  }
-
-  &__button-text,
-  &__button-text--microsoft {
-    font-size: 1em;
+  &__forgot-password {
+    margin: 24px 0 26px 0;
+    font-size: 1.14em;
+    line-height: 26px;
     color: #2856AE;
-  }
-  &__button-text--microsoft {
-    margin-left: 20px;
-  }
-
-  &__middle-wrapper {
-    position: relative;
-    width: 244px;
-    text-align: center;
-    margin-top: 20px;
-    z-index: 0;
+      &:hover {
+        color:#00308D;
+        cursor: pointer;
+      }
   }
 
-  &__decoration {
-    position: absolute;
-    height: 1px;
-    width: 100%;
-    background-color: #E2E9F3;
-    top: 12px;
-    z-index: 1;
+  &__checkbox {
+    display: flex;
+    align-self: flex-start;
+    align-items: center;
+    font-size: 16px;
+    line-height: 19px;
+    color: #2B3151;
   }
 
-  &__middle-paragraph {
-    position: relative;
-    font-size: 1.28em;
-    color: #8C93A3;
-    background: #fff;
-    z-index: 2;
+  &__checkmark {
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+  }
+
+  &__button {
+    background: #3EBF8A;
+    border-radius: 3px;
+    width: 264px;
+    height: 48px;
+    border-style: none;
+    color: #fff;
+    margin: 25px 0 30px;
+    font-weight: 500;
+    font-size: 1.3em;
+    line-height: 24px;
+      &:hover {
+        background: #008960;
+      }
   }
 }

@@ -1,11 +1,11 @@
 import './main.scss';
-import { Form } from './Form';
+import { Card } from './Card.jsx';
 
 const App = () => {
   return (
-<div className="container">
-  <Form />
-  </div>
+    <div className="container">
+      <Card />
+    </div>
   );
 }
 

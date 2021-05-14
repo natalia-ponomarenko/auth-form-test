@@ -1,0 +1,107 @@
+.card {
+  border: 1px solid #E2E9F3;
+  border-radius: 6px;
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 360px;
+  background-color: #FFFFFF;
+
+  &__title {
+    font-weight: 500;
+    font-size: 1.71em;
+    margin-top: 24px;
+    color: #2B3151;
+    line-height: 32px;
+  }
+  
+  &__subtitle-wrapper {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 8px;
+  }
+
+  &__subtitle {
+    color: #2B3151;
+    margin-top: 10px;
+    line-height: 26px;
+  }
+  
+  &__sign-button {
+    border-style: none;
+    background-color: #FFFFFF;
+    margin-left: 5px;
+    color: #2856AE;
+  }
+
+  &__button-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__button-google,
+  &__button-microsoft {
+    position: relative;
+    width: 264px;
+    height: 44px;
+    border: 1px solid #CDD7E5;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    margin-top: 16px;
+  }
+
+  &__button-google::after,
+  &__button-microsoft::after {
+    left: 14px;
+    top: 9px;
+    content: "";
+    position: absolute ;
+    width: 28px;
+    height: 28px;
+  }
+  
+  &__button-google::after {
+    background: url("../images/Google__G__Logo.svg"); 
+  }
+
+  &__button-microsoft::after {
+    background: url("../images/Microsoft_logo11.svg");
+  }
+
+  &__button-text,
+  &__button-text--microsoft {
+    font-size: 1em;
+    color: #2856AE;
+  }
+
+  &__button-text--microsoft {
+    margin-left: 18px;
+  }
+
+  &__button-text:hover,
+  &__button-text--microsoft:hover,
+  &__sign-button {
+    color:#00308D;
+    cursor: pointer;
+  }
+
+  &__decoration {
+    position: relative;
+    top: 20px;
+    height: 1px;
+    width: 244px;
+    background-color: #E2E9F3;
+    border-radius: 1px;
+    z-index: 1;
+  }
+
+  &__middle-paragraph {
+    padding: 0 10px;
+    font-size: 1.28em;
+    color: #8C93A3;
+    background: #fff;
+    margin-bottom: 5px;
+    z-index: 2;
+  }
+}

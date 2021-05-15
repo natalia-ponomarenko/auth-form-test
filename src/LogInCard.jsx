@@ -2,7 +2,7 @@ import React from 'react';
 import { Form } from './Form';
 import './main.scss';
 
-export const Card = () => {
+export const LogInCard = () => {
   return(
     <div className="card">
       <div className="card__title">

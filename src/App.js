@@ -1,10 +1,10 @@
 import './main.scss';
-import { Card } from './Card.jsx';
+import { LogInCard } from './LogInCard.jsx';
 
 const App = () => {
   return (
     <div className="container">
-      <Card />
+      <LogInCard />
     </div>
   );
 }

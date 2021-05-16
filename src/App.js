@@ -1,12 +1,11 @@
+import React from 'react';
 import './main.scss';
-import { LogInCard } from './LogInCard.jsx';
+import LogInCard from './LogInCard';
 
-const App = () => {
-  return (
-    <div className="container">
-      <LogInCard />
-    </div>
-  );
-}
+const App = () => (
+  <div className="container">
+    <LogInCard />
+  </div>
+);
 
 export default App;

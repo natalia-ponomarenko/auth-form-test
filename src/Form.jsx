@@ -1,51 +1,60 @@
-import {React, useState } from 'react';
+import { React, useState, useRef } from 'react';
 import './main.scss';
 
-export const Form = () => {
-  const [ email, setEmail ] = useState('');
-  const [ password, setPassword ] = useState('');
-  const [ rememberMe, setRememberMe ] = useState(false);
-  const [ emailError, setEmailError ] = useState(false);
+const Form = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [rememberMe, setRememberMe] = useState(false);
+  const [emailError, setEmailError] = useState(false);
+  const [passwordError, setPasswordError] = useState(false);
+  const emailRef = useRef(null);
+  const passwordRef = useRef(null);
 
   const handleInputChange = (event, callback) => {
     const { value } = event.target;
     callback(value);
-  }
+    setEmailError(false);
+    setPasswordError(false);
+  };
 
   const handleCheckBoxChange = (event) => {
     const { checked } = event.target;
     setRememberMe(checked);
-  }
+  };
 
-  const personalToken = (email, password, rememberMe) => (
-      {
-        "email": email,
-        "password": password,
-        'remember': rememberMe,
-      }
+  const personalToken = (userEmail, userPassword, userRememberMe) => (
+    {
+      email: userEmail,
+      password: userPassword,
+      remember: userRememberMe,
+    }
   );
 
   const validateInput = () => {
-    const validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    if(!email.match(validRegex)) {
+    const validRegex = /^[a-zA-Z0-9.!#$%&"*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    if (!email.match(validRegex) || !email) {
       setEmailError(true);
+      emailRef.current.focus();
+      return false;
+    } if (!password) {
+      setPasswordError(true);
+      passwordRef.current.focus();
       return false;
     }
     return true;
-  }
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const isValid = validateInput();
-    if(isValid) {
-      const userToken = personalToken(email, password, rememberMe);
+    if (isValid) {
+      personalToken(email, password, rememberMe);
       setEmail('');
       setPassword('');
       setRememberMe(false);
       setEmailError(false);
-      console.log(userToken);
     }
-  }
+  };
 
   return (
     <form
@@ -58,25 +67,35 @@ export const Form = () => {
         name="email"
         placeholder="Email"
         value={email}
-        onChange={event => handleInputChange(event, setEmail)}
-        required
+        onChange={(event) => handleInputChange(event, setEmail)}
+        ref={emailRef}
       />
-        {emailError &&
-          <div className="form__error">
-            Email is invalid!
-          </div>
-        }
+      {emailError && (
+        <div className="form__error">
+          Email is invalid!
+        </div>
+      )}
       <input
         className="form__input form__input--password"
         type="password"
         name="password"
         placeholder="Password"
         value={password}
-        onChange={event => handleInputChange(event, setPassword)}
-        required
+        onChange={(event) => handleInputChange(event, setPassword)}
+        ref={passwordRef}
       />
-      <div className="form__forgot-password">Forgot password?</div>
-      <div className="form__checkbox">
+      {passwordError && (
+        <div className="form__error">
+          Enter the password!
+        </div>
+      )}
+      <a
+        href="https://accounts.google.com/signin/v2/recoveryidentifier?flowName=GlifWebSignIn&flowEntry=ServiceLogin"
+        className="form__forgot-password"
+      >
+        Forgot password?
+      </a>
+      <label htmlFor="rememberMe" className="form__checkbox">
         <input
           type="checkbox"
           id="rememberMe"
@@ -85,16 +104,16 @@ export const Form = () => {
           onChange={handleCheckBoxChange}
           className="form__checkmark"
         />
-        <label htmlFor="rememberMe">
-          Remember me
-        </label>
-      </div>
+        Remember me
+      </label>
       <button
         type="submit"
         className="form__button"
       >
         Continue
       </button>
-  </form>
+    </form>
   );
-}
+};
+
+export default Form;

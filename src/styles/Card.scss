@@ -21,6 +21,7 @@
 
   &__subtitle {
     margin-top: 10px;
+    font-size: 1.14em;
     line-height: 1.37em;
     color: $checkbox-color;
   }
@@ -28,46 +29,38 @@
   &__sign-button {
     margin-left: 5px;
     border-style: none;
+    font-size: 1.14em;
     background-color: $main-color;
     color: $bright-color;
+      &:hover {
+        @include hover-text;
+      }
   }
 
   &__button-wrapper {
     @include flex-column;
   }
 
-  &__button-google,
-  &__button-microsoft {
-    @include button;
+  &__link-microsoft,
+  &__link-google {
+    @include button-link;
+    &:hover {
+      @include cursor-hover;
+      color: $accent-color;
+    }
   }
 
-  &__button-google::after,
-  &__button-microsoft::after {
+  &__link-google::after,
+  &__link-microsoft::after {
     @include button-picture;
   }
   
-  &__button-google::after {
+  &__link-google::after {
     background: url("../images/Google__G__Logo.svg"); 
   }
 
-  &__button-microsoft::after {
+  &__link-microsoft::after {
     background: url("../images/Microsoft_logo11.svg");
-  }
-
-  &__button-text,
-  &__button-text--microsoft {
-    font-size: 1em;
-    color: $bright-color;
-  }
-
-  &__button-text--microsoft {
-    margin-left: 18px;
-  }
-
-  &__button-text:hover,
-  &__button-text--microsoft:hover,
-  &__sign-button {
-    @include text-button-hover;
   }
 
   &__decoration {

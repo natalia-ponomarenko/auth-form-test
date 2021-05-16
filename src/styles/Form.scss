@@ -8,6 +8,7 @@
     height: 40px;
     border: 1px solid $border-color;
     border-radius: 4px;
+    font-size: 1.14em;
     color: $input-color;
   }
 
@@ -16,9 +17,9 @@
     font-size: 1.14em;
     line-height: 1.36em;
     color: $bright-color;
+    text-decoration: none;
       &:hover {
-        color: $accent-color;
-        cursor: pointer;
+        @include hover-text;
       }
   }
 
@@ -33,20 +34,23 @@
     height: 20px;
     width: 20px;
     margin-right: 10px;
+    color: $checkbox-color;
   }
 
   &__button {
     @include continue-button;
       &:hover {
+        cursor: pointer;
         background: $continue-button-color;
       }
   }
 
   &__error {
-    text-align: center;
-    padding: 10px 0;
-    border-radius: 5px;
     width: 100%;
-    background-color: #F8D7DA;
+    margin-top: 2px;
+    text-align: end;
+    font-size: 12px;
+    line-height: 15px;
+    color: $error-danger-color;
   }
 }

@@ -41,14 +41,21 @@
   border-radius: 3px;
 }
 
-@mixin button {
+@mixin button-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: relative;
+  padding-left: 56px;
   margin-top: 16px;
   width: $main-elements-width;
   height: 44px;
   border: 1px solid $border-color;
   border-radius: 4px;
   background-color: $main-color;
+  text-decoration: none;
+  font-size: 14px;
+  color: $bright-color;
 }
 
 @mixin button-picture {
@@ -60,7 +67,11 @@
   height: 28px;
 }
 
-@mixin text-button-hover {
-  color:$accent-color;
+@mixin cursor-hover {
   cursor: pointer;
+}
+
+@mixin hover-text {
+  cursor: pointer;
+  color: $accent-color;
 }

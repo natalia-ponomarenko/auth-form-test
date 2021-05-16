@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/auth-form-test/static/css/main.96215865.chunk.css",
-    "main.js": "/auth-form-test/static/js/main.486afcdf.chunk.js",
-    "main.js.map": "/auth-form-test/static/js/main.486afcdf.chunk.js.map",
+    "main.css": "/auth-form-test/static/css/main.9d6fb636.chunk.css",
+    "main.js": "/auth-form-test/static/js/main.f4ab716c.chunk.js",
+    "main.js.map": "/auth-form-test/static/js/main.f4ab716c.chunk.js.map",
     "runtime-main.js": "/auth-form-test/static/js/runtime-main.898eafd9.js",
     "runtime-main.js.map": "/auth-form-test/static/js/runtime-main.898eafd9.js.map",
     "static/js/2.79677fe3.chunk.js": "/auth-form-test/static/js/2.79677fe3.chunk.js",
     "static/js/2.79677fe3.chunk.js.map": "/auth-form-test/static/js/2.79677fe3.chunk.js.map",
     "index.html": "/auth-form-test/index.html",
-    "static/css/main.96215865.chunk.css.map": "/auth-form-test/static/css/main.96215865.chunk.css.map",
+    "static/css/main.9d6fb636.chunk.css.map": "/auth-form-test/static/css/main.9d6fb636.chunk.css.map",
     "static/js/2.79677fe3.chunk.js.LICENSE.txt": "/auth-form-test/static/js/2.79677fe3.chunk.js.LICENSE.txt",
     "static/media/main.scss": "/auth-form-test/static/media/Microsoft_logo11.7c88460e.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.898eafd9.js",
     "static/js/2.79677fe3.chunk.js",
-    "static/css/main.96215865.chunk.css",
-    "static/js/main.486afcdf.chunk.js"
+    "static/css/main.9d6fb636.chunk.css",
+    "static/js/main.f4ab716c.chunk.js"
   ]
 }

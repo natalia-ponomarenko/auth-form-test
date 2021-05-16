@@ -16,12 +16,12 @@ const LogInCard = () => (
       </button>
     </div>
     <div className="card__button-wrapper">
-      <a href="https://www.google.com/account/about/" className="card__link-google">
+      <button type="button" className="card__button-google">
         Continue with Google
-      </a>
-      <a href="https://account.microsoft.com/account?lang=en-us" className="card__link-microsoft">
+      </button>
+      <button type="button" className="card__button-microsoft">
         Continue with Microsoft
-      </a>
+      </button>
     </div>
     <hr className="card__decoration" />
     <div className="card__middle-paragraph">or</div>

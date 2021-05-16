@@ -17,7 +17,8 @@
     font-size: 1.14em;
     line-height: 1.36em;
     color: $bright-color;
-    text-decoration: none;
+    border-style: none;
+    background-color: $main-color;
       &:hover {
         @include hover-text;
       }

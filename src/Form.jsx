@@ -89,12 +89,9 @@ const Form = () => {
           Enter the password!
         </div>
       )}
-      <a
-        href="https://accounts.google.com/signin/v2/recoveryidentifier?flowName=GlifWebSignIn&flowEntry=ServiceLogin"
-        className="form__forgot-password"
-      >
+      <button type="button" className="form__forgot-password">
         Forgot password?
-      </a>
+      </button>
       <label htmlFor="rememberMe" className="form__checkbox">
         <input
           type="checkbox"

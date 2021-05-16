@@ -41,8 +41,8 @@
     @include flex-column;
   }
 
-  &__link-microsoft,
-  &__link-google {
+  &__button-microsoft,
+  &__button-google {
     @include button-link;
     &:hover {
       @include cursor-hover;
@@ -50,16 +50,16 @@
     }
   }
 
-  &__link-google::after,
-  &__link-microsoft::after {
+  &__button-google::after,
+  &__button-microsoft::after {
     @include button-picture;
   }
   
-  &__link-google::after {
+  &__button-google::after {
     background: url("../images/Google__G__Logo.svg"); 
   }
 
-  &__link-microsoft::after {
+  &__button-microsoft::after {
     background: url("../images/Microsoft_logo11.svg");
   }
 

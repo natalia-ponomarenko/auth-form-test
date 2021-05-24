@@ -1,6 +1,9 @@
 import { React, useState, useRef } from 'react';
 import './main.scss';
 
+// const classNames = require('classnames');
+import classNames from 'classnames';
+
 const Form = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -62,7 +65,7 @@ const Form = () => {
       onSubmit={handleSubmit}
     >
       <input
-        className="form__input form__input--email"
+        className={classNames('form__input form__input--email', { error: emailError })}
         type="text"
         name="email"
         placeholder="Email"
@@ -76,7 +79,7 @@ const Form = () => {
         </div>
       )}
       <input
-        className="form__input form__input--password"
+        className={classNames('form__input form__input--password', { error: passwordError })}
         type="password"
         name="password"
         placeholder="Password"

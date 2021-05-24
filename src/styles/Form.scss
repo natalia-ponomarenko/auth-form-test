@@ -11,9 +11,17 @@
     font-size: 1.14em;
     color: $input-color;
 
-  &:focus {
-    border: 1px solid #B6D4EE;
+    &:focus {
+      outline: none !important;
+      border: 1px solid $input-border-focus-color;
+      background-color: $input-background-color;
+      color: #000;
     }
+  }
+
+  &__input.error {
+    border: 1px solid $error-danger-color !important;
+    background-color: $input-background-danger-color ;
   }
 
   &__forgot-password {
@@ -59,3 +67,10 @@
     color: $error-danger-color;
   }
 }
+
+.form__input.error {
+  border: 1px solid $error-danger-color ;
+  background-color: $input-background-danger-color;
+}
+
+

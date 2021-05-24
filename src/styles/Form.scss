@@ -15,13 +15,17 @@
       outline: none !important;
       border: 1px solid $input-border-focus-color;
       background-color: $input-background-color;
-      color: #000;
+      color: $focus-text-color;
     }
   }
 
   &__input.error {
     border: 1px solid $error-danger-color !important;
     background-color: $input-background-danger-color ;
+  }
+
+  &__input--password {
+    margin-top: 24px;
   }
 
   &__forgot-password {
@@ -36,18 +40,50 @@
       }
   }
 
-  &__checkbox {
-    @include flex-start;
+  &__input-group {
+    align-self: flex-start;
+  }
+
+  &__label {
     font-size: 1.14em;
     line-height: 1em;
     color: $checkbox-color;
+    @include flex-centered;
   }
 
   &__checkmark {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  &__container {
+    display: inline-block;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 2px solid #B0BACA;
+    border-radius: 0.25em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 130%;
     height: 20px;
     width: 20px;
     margin-right: 10px;
-    color: $checkbox-color;
+  }
+
+  &__icon {
+    position: relative;
+    left: -2px;
+    top: -2px;
+    display: none;
+    width: 20px;
+    height: 20px;
+    background-color: $accent-continue-button-color;
+    border-radius: 0.25em;
+  }
+
+  &__checkmark:checked+label .form__icon {
+    display: block;
   }
 
   &__button {
@@ -65,12 +101,6 @@
     font-size: 12px;
     line-height: 15px;
     color: $error-danger-color;
+    margin-bottom: -16px;
   }
 }
-
-.form__input.error {
-  border: 1px solid $error-danger-color ;
-  background-color: $input-background-danger-color;
-}
-
-

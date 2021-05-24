@@ -1,4 +1,5 @@
 .container {
+  height: 100vh;
   @include flex-centered;
   background-color: #F6F8FC;
 }

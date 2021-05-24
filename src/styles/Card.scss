@@ -1,6 +1,5 @@
 .card {
   @include flex-centered-column;
-  margin-top: 80px;
   width: $main-full-width;
   border: 1px solid $main-border-color;
   background-color: $main-color;

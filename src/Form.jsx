@@ -1,8 +1,7 @@
 import { React, useState, useRef } from 'react';
 import './main.scss';
-
-// const classNames = require('classnames');
 import classNames from 'classnames';
+import check from './images/check.svg';
 
 const Form = () => {
   const [email, setEmail] = useState('');
@@ -95,7 +94,7 @@ const Form = () => {
       <button type="button" className="form__forgot-password">
         Forgot password?
       </button>
-      <label htmlFor="rememberMe" className="form__checkbox">
+      <div className="form__input-group">
         <input
           type="checkbox"
           id="rememberMe"
@@ -104,8 +103,13 @@ const Form = () => {
           onChange={handleCheckBoxChange}
           className="form__checkmark"
         />
-        Remember me
-      </label>
+        <label htmlFor="rememberMe" className="form__label">
+          <div className="form__container">
+            <img src={check} alt="checkmark" className="form__icon" />
+          </div>
+          Remember me
+        </label>
+      </div>
       <button
         type="submit"
         className="form__button"

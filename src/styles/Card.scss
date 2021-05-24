@@ -19,18 +19,19 @@
   }
 
   &__subtitle {
-    margin-top: 10px;
+    margin-top: 8px;
     font-size: 1.14em;
     line-height: 1.37em;
     color: $checkbox-color;
   }
   
   &__sign-button {
-    margin-left: 5px;
+    margin-left: 4px;
     border-style: none;
     font-size: 1.14em;
     background-color: $main-color;
     color: $bright-color;
+    @include transition-effect;
       &:hover {
         @include hover-text;
       }
@@ -43,6 +44,7 @@
   &__button-microsoft,
   &__button-google {
     @include button-link;
+    @include transition-effect;
     &:hover {
       @include cursor-hover;
       color: $accent-color;
@@ -73,8 +75,8 @@
   }
 
   &__middle-paragraph {
-    margin-bottom: 5px;
-    padding: 0 10px;
+    margin-bottom: 4px;
+    padding: 0 8px;
     font-size: 1.28em;
     color: $half-dark-color;
     background: $main-color;

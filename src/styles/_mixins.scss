@@ -49,7 +49,7 @@
   padding-left: 56px;
   margin-top: 16px;
   width: $main-elements-width;
-  height: 44px;
+  height: 48px;
   border: 1px solid $border-color;
   border-radius: 4px;
   background-color: $main-color;
@@ -74,4 +74,8 @@
 @mixin hover-text {
   cursor: pointer;
   color: $accent-color;
+}
+
+@mixin transition-effect {
+  transition: color 0.5s ease-out;
 }

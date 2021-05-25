@@ -24,13 +24,11 @@ const Form = () => {
     setRememberMe(checked);
   };
 
-  const personalToken = (userEmail, userPassword, userRememberMe) => (
-    {
-      email: userEmail,
-      password: userPassword,
-      remember: userRememberMe,
-    }
-  );
+  const personalToken = (userEmail, userPassword, userRememberMe) => ({
+    email: userEmail,
+    password: userPassword,
+    remember: userRememberMe,
+  });
 
   const validateInput = () => {
     const validRegex = /^[a-zA-Z0-9.!#$%&"*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
@@ -38,7 +36,8 @@ const Form = () => {
       setEmailError(true);
       emailRef.current.focus();
       return false;
-    } if (!password) {
+    }
+    if (!password) {
       setPasswordError(true);
       passwordRef.current.focus();
       return false;
@@ -59,10 +58,7 @@ const Form = () => {
   };
 
   return (
-    <form
-      className="form"
-      onSubmit={handleSubmit}
-    >
+    <form className="form" onSubmit={handleSubmit}>
       <input
         className={cn('form__input form__input--email', { error: emailError })}
         type="text"
@@ -72,11 +68,7 @@ const Form = () => {
         onChange={(event) => handleInputChange(event, setEmail)}
         ref={emailRef}
       />
-      {emailError && (
-        <div className="form__error">
-          Email is invalid!
-        </div>
-      )}
+      {emailError && <div className="form__error">Email is invalid!</div>}
       <input
         className={cn('form__input form__input--password', { error: passwordError })}
         type="password"
@@ -86,11 +78,7 @@ const Form = () => {
         onChange={(event) => handleInputChange(event, setPassword)}
         ref={passwordRef}
       />
-      {passwordError && (
-        <div className="form__error">
-          Enter the password!
-        </div>
-      )}
+      {passwordError && <div className="form__error">Enter the password!</div>}
       <button type="button" className="form__forgot-password">
         Forgot password?
       </button>
@@ -110,10 +98,7 @@ const Form = () => {
           Remember me
         </label>
       </div>
-      <button
-        type="submit"
-        className="form__button"
-      >
+      <button type="submit" className="form__button">
         Continue
       </button>
     </form>

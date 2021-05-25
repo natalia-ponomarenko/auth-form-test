@@ -4,13 +4,9 @@ import './main.scss';
 
 const LogInCard = () => (
   <div className="card">
-    <div className="card__title">
-      Log in
-    </div>
+    <div className="card__title">Log in</div>
     <div className="card__subtitle-wrapper">
-      <div className="card__subtitle">
-        Dont have an account?
-      </div>
+      <div className="card__subtitle">Dont have an account?</div>
       <button type="button" className="card__sign-button">
         Sign up
       </button>

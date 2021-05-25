@@ -13,7 +13,7 @@
     line-height: 1.7em;
     color: $checkbox-color;
   }
-  
+
   &__subtitle-wrapper {
     @include flex-baselined;
     margin-bottom: 8px;
@@ -25,7 +25,7 @@
     line-height: 1.37em;
     color: $checkbox-color;
   }
-  
+
   &__sign-button {
     margin-left: 4px;
     border-style: none;
@@ -33,9 +33,9 @@
     background-color: $main-color;
     color: $bright-color;
     @include transition-effect;
-      &:hover {
-        @include hover-text;
-      }
+    &:hover {
+      @include hover-text;
+    }
   }
 
   &__button-wrapper {
@@ -56,20 +56,21 @@
   &__button-microsoft::after {
     @include button-picture;
   }
-  
+
   &__button-google::after {
-    background: url("../images/Google__G__Logo.svg"); 
+    background: url('../images/Google__G__Logo.svg');
   }
 
   &__button-microsoft::after {
-    background: url("../images/Microsoft_logo11.svg");
+    background: url('../images/Microsoft_logo11.svg');
   }
 
   &__decoration {
     position: relative;
     top: 20px;
     height: 1px;
-    width: $main-elements-width;
+    max-width: $main-elements-width;
+    width: 100%;
     background-color: $main-border-color;
     border-radius: 1px;
     z-index: 1;

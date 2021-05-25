@@ -30,7 +30,8 @@
 
 @mixin continue-button {
   margin: 25px 0 0;
-  width: $main-elements-width;
+  width: 100%;
+  max-width: $main-elements-width;
   height: 48px;
   font-weight: $font-bold;
   font-size: 1.3em;
@@ -62,8 +63,8 @@
 @mixin button-picture {
   left: 14px;
   top: 9px;
-  content: "";
-  position: absolute ;
+  content: '';
+  position: absolute;
   width: 28px;
   height: 28px;
 }

@@ -29,7 +29,7 @@
 }
 
 @mixin continue-button {
-  margin: 25px 0 30px;
+  margin: 25px 0 0;
   width: $main-elements-width;
   height: 48px;
   font-weight: $font-bold;
@@ -46,9 +46,10 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
-  padding-left: 56px;
+  padding: 0 40px 0 56px;
   margin-top: 16px;
-  width: $main-elements-width;
+  width: 100%;
+  max-width: 314px;
   height: 48px;
   border: 1px solid $border-color;
   border-radius: 4px;

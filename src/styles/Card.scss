@@ -1,12 +1,13 @@
 .card {
   @include flex-centered-column;
-  width: $main-full-width;
+  max-width: $main-full-width;
+  width: 100%;
   border: 1px solid $main-border-color;
   background-color: $main-color;
   border-radius: 6px;
+  padding: 24px 48px 32px;
 
   &__title {
-    margin-top: 24px;
     font-size: 1.71em;
     font-weight: $font-bold;
     line-height: 1.7em;

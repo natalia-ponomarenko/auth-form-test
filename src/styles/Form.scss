@@ -3,13 +3,15 @@
 
   &__input {
     margin-top: 16px;
-    padding: 10px 8px;
-    width: $main-elements-width;
+    padding: 10px 18px 10px 8px;
+    width: 100%;
+    max-width: $main-elements-width;
     height: 40px;
     border: 1px solid $border-color;
     border-radius: 4px;
     font-size: 1.14em;
-    color: $input-color;
+    color: $focus-text-color;
+    line-height: 19px;
 
     &:focus {
       outline: none !important;
@@ -43,12 +45,15 @@
   &__input-group {
     align-self: flex-start;
   }
-
+  
   &__label {
     font-size: 1.14em;
     line-height: 1em;
     color: $checkbox-color;
     @include flex-centered;
+    &:hover {
+      @include cursor-hover;
+    }
   }
 
   &__checkmark {

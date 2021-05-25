@@ -1,6 +1,6 @@
 import { React, useState, useRef } from 'react';
 import './main.scss';
-import classNames from 'classnames';
+import cn from 'classnames';
 import check from './images/check.svg';
 
 const Form = () => {
@@ -64,7 +64,7 @@ const Form = () => {
       onSubmit={handleSubmit}
     >
       <input
-        className={classNames('form__input form__input--email', { error: emailError })}
+        className={cn('form__input form__input--email', { error: emailError })}
         type="text"
         name="email"
         placeholder="Email"
@@ -78,7 +78,7 @@ const Form = () => {
         </div>
       )}
       <input
-        className={classNames('form__input form__input--password', { error: passwordError })}
+        className={cn('form__input form__input--password', { error: passwordError })}
         type="password"
         name="password"
         placeholder="Password"

@@ -1,22 +1,28 @@
+$main-elements-width: 264px;
+$main-full-width: 360px;
+
 $font-regular: 400;
 $font-bold: 500;
 
-$main-color: #fff;
-$main-border-color: #e2e9f3;
-$half-dark-color: #8c93a3;
-$input-color: #929bad;
-$accent-color: #00308d;
-$bright-color: #2856ae;
-$border-color: #cdd7e5;
-$continue-button-color: #008960;
-$accent-continue-button-color: #3ebf8a;
-$checkbox-color: #2b3151;
-$error-danger-color: #e1485b;
-$input-border-focus-color: #0092cb;
-$input-background-color: #f4faff;
-$input-background-danger-color: #fffbfb;
-$focus-text-color: #000;
-$background-color: #f6f8fc;
+$text300: #8c93a3;
+$text500:#2b3151;
 
-$main-elements-width: 264px;
-$main-full-width: 360px;
+$primary100: #f5faff;
+$primary200: #61A8EA;
+$primary300: #2856ae;
+$primary400: #00308d;
+
+$secondary300: #3ebf8a;
+$secondary400: #008960;
+
+$error100: #fffbfb;
+$error300: #e1485b;
+
+$other00: #fff;
+$other50:#fcfdff;
+$other100: #f6f8fc;
+$other200: #e2e9f3;
+$other400: #cdd7e5;
+$other500: #b0baca;
+$other600: #929bad;
+

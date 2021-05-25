@@ -36,8 +36,8 @@
   font-weight: $font-bold;
   font-size: 1.3em;
   line-height: 1.26em;
-  background: $accent-continue-button-color;
-  color: $main-color;
+  background: $secondary300;
+  color: $other00;
   border-style: none;
   border-radius: 3px;
 }
@@ -52,12 +52,13 @@
   width: 100%;
   max-width: 314px;
   height: 48px;
-  border: 1px solid $border-color;
+  border: 1px solid $other400;
   border-radius: 4px;
-  background-color: $main-color;
+  background-color: $other00;
   text-decoration: none;
   font-size: 14px;
-  color: $bright-color;
+  color: $primary300;
+  background-color: $other50;
 }
 
 @mixin button-picture {
@@ -75,7 +76,7 @@
 
 @mixin hover-text {
   cursor: pointer;
-  color: $accent-color;
+  color: $primary400;
 }
 
 @mixin transition-effect {

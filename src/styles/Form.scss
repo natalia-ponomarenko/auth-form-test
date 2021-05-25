@@ -7,23 +7,24 @@
     width: 100%;
     max-width: $main-elements-width;
     height: 40px;
-    border: 1px solid $border-color;
+    border: 1px solid $other400;
     border-radius: 4px;
     font-size: 1.14em;
-    color: $focus-text-color;
+    color: $text500;
     line-height: 19px;
+    background-color: $other50;
 
     &:focus {
       outline: none !important;
-      border: 1px solid $input-border-focus-color;
-      background-color: $input-background-color;
-      color: $focus-text-color;
+      border: 1px solid $primary200;
+      background-color: $primary100;
+      color: $text500;
     }
   }
 
   &__input.error {
-    border: 1px solid $error-danger-color !important;
-    background-color: $input-background-danger-color;
+    border: 1px solid $error300 !important;
+    background-color: $error100;
   }
 
   &__input--password {
@@ -34,9 +35,9 @@
     margin: 24px 0 26px 0;
     font-size: 1.14em;
     line-height: 1.36em;
-    color: $bright-color;
+    color: $primary300;
     border-style: none;
-    background-color: $main-color;
+    background-color: $other00;
     &:hover {
       @include hover-text;
     }
@@ -49,7 +50,7 @@
   &__label {
     font-size: 1.14em;
     line-height: 1em;
-    color: $checkbox-color;
+    color: $text500;
     @include flex-centered;
     &:hover {
       @include cursor-hover;
@@ -66,7 +67,7 @@
     display: inline-block;
     flex-shrink: 0;
     flex-grow: 0;
-    border: 2px solid #b0baca;
+    border: 2px solid $other500;
     border-radius: 0.25em;
     background-repeat: no-repeat;
     background-position: center center;
@@ -83,7 +84,7 @@
     display: none;
     width: 20px;
     height: 20px;
-    background-color: $accent-continue-button-color;
+    background-color: $secondary300;
     border-radius: 0.25em;
   }
 
@@ -97,7 +98,7 @@
 
     &:hover {
       cursor: pointer;
-      background-color: $continue-button-color;
+      background-color: $secondary400;
     }
   }
 
@@ -107,7 +108,7 @@
     text-align: end;
     font-size: 12px;
     line-height: 15px;
-    color: $error-danger-color;
+    color: $error300;
     margin-bottom: -16px;
   }
 }

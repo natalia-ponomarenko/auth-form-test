@@ -13,19 +13,15 @@ module.exports = {
     'plugin:prettier/recommended',
   ],
   parserOptions: {
-    // requireConfigFile: false,
     sourceType: 'module',
     ecmaVersion: 2018,
     ecmaFeatures: {
       jsx: true,
     },
     project: './tsconfig.json',
-    ecmaVersion: 12,
-    sourceType: 'module',
   },
-  // plugins: ['react', "prettier", "@babel"],
   rules: {
-    'prettier/prettier': "error",
+    'prettier/prettier': 'error',
     'import/prefer-default-export': 0,
     'no-use-before-define': [
       'error',

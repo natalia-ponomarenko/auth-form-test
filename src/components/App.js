@@ -1,5 +1,5 @@
 import React from 'react';
-import './main.scss';
+import '../styles/main.scss';
 import LogInCard from './LogInCard';
 
 const App = () => (

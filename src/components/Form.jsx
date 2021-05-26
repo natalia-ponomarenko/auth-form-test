@@ -1,7 +1,7 @@
-import { React, useState, useRef } from 'react';
-import '../styles/main.scss';
 import cn from 'classnames';
-import check from '../images/check.svg';
+import { React, useRef, useState } from 'react';
+import '@styles/main.scss';
+import check from '@images/check.svg';
 
 const Form = () => {
   const [email, setEmail] = useState('');

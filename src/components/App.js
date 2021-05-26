@@ -1,6 +1,6 @@
 import React from 'react';
-import '../styles/main.scss';
 import LogInCard from './LogInCard';
+import '@styles/main.scss';
 
 const App = () => (
   <div className="container">

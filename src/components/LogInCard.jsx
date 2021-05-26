@@ -1,6 +1,6 @@
 import React from 'react';
 import Form from './Form';
-import '../styles/main.scss';
+import '@styles/main.scss';
 
 const LogInCard = () => (
   <div className="card">

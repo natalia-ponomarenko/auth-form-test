@@ -1,0 +1,36 @@
+{
+  "typeRoots": [
+    "./typings",
+    "./node_modules/@types/"
+  ],
+  "baseUrl": "./src",
+  "paths": {
+      "@images/*": ["src/images*"],
+      "@styles/*": ["src/styles*"],
+      "@components/*": ["src/components*"]
+  },
+  "compilerOptions": {
+    "target": "es5",
+    "module": "esnext",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx"
+  },
+  "include": [
+    "src"
+, "typings" ]
+}

@@ -4,6 +4,18 @@ module.exports = {
     browser: true,
     es2021: true,
   },
+  settings: {
+    'import/resolver': {
+      'eslint-import-resolver-custom-alias': {
+        alias: {
+          '@images': 'src/images/',
+          '@styles': 'src/styles/',
+          '@components': 'src/components/',
+        },
+        extensions: ['.js', '.jsx'],
+      },
+    },
+  },
   extends: [
     'plugin:react/recommended',
     'airbnb',

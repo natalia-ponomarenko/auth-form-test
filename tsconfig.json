@@ -1,8 +1,4 @@
 {
-  "typeRoots": [
-    "./typings",
-    "./node_modules/@types/"
-  ],
   "baseUrl": "./src",
   "paths": {
       "@images/*": ["src/images*"],

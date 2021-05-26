@@ -1,9 +1,9 @@
 {
   "baseUrl": "./src",
   "paths": {
-      "@images/*": ["src/images*"],
-      "@styles/*": ["src/styles*"],
-      "@components/*": ["src/components*"]
+      "@images/*": ["images*"],
+      "@styles/*": ["styles*"],
+      "@components/*": ["components*"]
   },
   "compilerOptions": {
     "target": "es5",

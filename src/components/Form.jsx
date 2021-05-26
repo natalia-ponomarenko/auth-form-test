@@ -2,6 +2,8 @@ import cn from 'classnames';
 import { React, useRef, useState } from 'react';
 import '@styles/main.scss';
 import check from '@images/check.svg';
+import Button from './Button';
+// import { useForm } from 'react-hook-form';
 
 const Form = () => {
   const [email, setEmail] = useState('');
@@ -98,9 +100,7 @@ const Form = () => {
           Remember me
         </label>
       </div>
-      <button type="submit" className="form__button">
-        Continue
-      </button>
+      <Button className="form__button">Continue</Button>
     </form>
   );
 };

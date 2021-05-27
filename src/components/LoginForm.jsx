@@ -1,9 +1,9 @@
 import cn from 'classnames';
 import { React, useRef, useState } from 'react';
 import '@styles/main.scss';
-import check from '@images/check.svg';
-import Button from './Button';
-// import { useForm } from 'react-hook-form';
+import Button from './InteractiveParts/Button';
+import Input from './InteractiveParts/Input';
+import CheckBoxGroup from './InteractiveParts/CheckBoxGroup';
 
 const Form = () => {
   const [email, setEmail] = useState('');
@@ -61,45 +61,33 @@ const Form = () => {
 
   return (
     <form className="form" onSubmit={handleSubmit}>
-      <input
+      <Input
         className={cn('form__input form__input--email', { error: emailError })}
         type="text"
-        name="email"
+        nameOfInput="email"
         placeholder="Email"
         value={email}
         onChange={(event) => handleInputChange(event, setEmail)}
         ref={emailRef}
+        error={emailError}
       />
-      {emailError && <div className="form__error">Email is invalid!</div>}
-      <input
+      <Input
         className={cn('form__input form__input--password', { error: passwordError })}
-        type="password"
-        name="password"
+        type="text"
+        nameOfInput="password"
         placeholder="Password"
         value={password}
         onChange={(event) => handleInputChange(event, setPassword)}
         ref={passwordRef}
+        error={passwordError}
       />
-      {passwordError && <div className="form__error">Enter the password!</div>}
-      <button type="button" className="form__forgot-password">
-        Forgot password?
-      </button>
-      <div className="form__input-group">
-        <input
-          type="checkbox"
-          id="rememberMe"
-          name="rememberMe"
-          checked={rememberMe}
-          onChange={handleCheckBoxChange}
-          className="form__checkmark"
-        />
-        <label htmlFor="rememberMe" className="form__label">
-          <div className="form__container">
-            <img src={check} alt="checkmark" className="form__icon" />
-          </div>
-          Remember me
-        </label>
-      </div>
+      <Button className="form__forgot-password">Forgot password?</Button>
+      <CheckBoxGroup
+        name="RememberMe"
+        checked={rememberMe}
+        onChange={handleCheckBoxChange}
+        labelText="Remember me"
+      />
       <Button className="form__button">Continue</Button>
     </form>
   );

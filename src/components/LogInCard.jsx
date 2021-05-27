@@ -1,27 +1,21 @@
 import React from 'react';
-import Form from './Form';
+import LoginForm from './LoginForm';
+import ButtonLink from './InteractiveParts/ButtonLink';
+import CardHeading from './CardHeading';
+import Divider from './InteractiveParts/Divider';
 import '@styles/main.scss';
 
 const LogInCard = () => (
   <div className="card">
-    <div className="card__title">Log in</div>
-    <div className="card__subtitle-wrapper">
-      <div className="card__subtitle">Dont have an account?</div>
-      <button type="button" className="card__sign-button">
-        Sign up
-      </button>
-    </div>
+    <CardHeading title="Log in" subtitle="Don't have an account?" buttonText="Sign in" />
     <div className="card__button-wrapper">
-      <button type="button" className="card__button-google">
-        Continue with Google
-      </button>
-      <button type="button" className="card__button-microsoft">
-        Continue with Microsoft
-      </button>
+      <ButtonLink className="card__button-google">Continue with Google</ButtonLink>
+      <ButtonLink className="card__button-microsoft">Continue with Microsoft</ButtonLink>
     </div>
-    <hr className="card__decoration" />
-    <div className="card__middle-paragraph">or</div>
-    <Form />
+    <>
+      <Divider>or</Divider>
+    </>
+    <LoginForm />
   </div>
 );
 

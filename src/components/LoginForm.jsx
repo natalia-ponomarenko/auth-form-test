@@ -11,18 +11,21 @@ const Form = () => {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm();
 
   const onSubmit = (data) => {
     console.log(data);
+    reset();
   };
 
   return (
     <form className="form" onSubmit={handleSubmit(onSubmit)}>
       <Input
-        className={cn('form__input form__input--email')}
+        className={cn('form__input form__input--email', { error: errors.email?.message })}
         type="text"
         {...register('email', {
+          required: true,
           pattern: {
             value: /^[a-zA-Z0-9.!#$%&"*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
             message: 'Email is invalid!',
@@ -32,7 +35,7 @@ const Form = () => {
         error={errors.email?.message}
       />
       <Input
-        className={cn('form__input form__input--password')}
+        className={cn('form__input form__input--password', { error: errors.password?.message })}
         type="password"
         {...register('password', {
           required: 'Enter the password!',

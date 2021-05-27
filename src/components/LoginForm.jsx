@@ -14,6 +14,9 @@ const Form = () => {
     reset,
   } = useForm();
 
+  const emailValidationRegExp =
+    /^[a-zA-Z0-9.!#$%&"*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
   const onSubmit = (data) => {
     console.log(data);
     reset();
@@ -27,7 +30,7 @@ const Form = () => {
         {...register('email', {
           required: true,
           pattern: {
-            value: /^[a-zA-Z0-9.!#$%&"*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+            value: emailValidationRegExp,
             message: 'Email is invalid!',
           },
         })}

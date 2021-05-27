@@ -6,14 +6,14 @@ const propTypes = {
   type: PropTypes.string,
   className: PropTypes.string,
   placeholder: PropTypes.string,
-  error: PropTypes.bool,
+  error: PropTypes.string,
 };
 
 const defaultProps = {
   type: 'text',
   className: '',
   placeholder: '',
-  error: false,
+  error: '',
 };
 
 const Input = forwardRef(({ className, type, placeholder, error, ...props }, ref) => {

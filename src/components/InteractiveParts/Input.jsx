@@ -1,40 +1,31 @@
 import React, { forwardRef } from 'react';
 import '@styles/main.scss';
 import PropTypes from 'prop-types';
-import Error from './Error';
 
-const Input = forwardRef(
-  ({ className, type, nameOfInput, placeholder, value, onChange, error }, ref) => {
-    return (
-      <>
-        <input
-          className={className}
-          type={type}
-          name={nameOfInput}
-          placeholder={placeholder}
-          value={value}
-          onChange={onChange}
-          ref={ref}
-        />
-        {error && <Error>Email is invalid!</Error>}
-      </>
-    );
-  },
-);
-
-export default Input;
-
-Input.propTypes = {
+const propTypes = {
+  type: PropTypes.string,
   className: PropTypes.string,
-  type: PropTypes.string.isRequired,
-  nameOfInput: PropTypes.string.isRequired,
   placeholder: PropTypes.string,
-  value: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired,
-  error: PropTypes.bool.isRequired,
+  error: PropTypes.bool,
 };
 
-Input.defaultProps = {
+const defaultProps = {
+  type: 'text',
   className: '',
   placeholder: '',
+  error: false,
 };
+
+const Input = forwardRef(({ className, type, placeholder, error, ...props }, ref) => {
+  return (
+    <>
+      <input {...props} className={className} type={type} placeholder={placeholder} ref={ref} />
+      {error && <div className="form__error">{error}</div>}
+    </>
+  );
+});
+
+Input.propTypes = propTypes;
+Input.defaultProps = defaultProps;
+
+export default Input;

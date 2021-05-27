@@ -2,6 +2,10 @@ import React from 'react';
 import '@styles/main.scss';
 import PropTypes from 'prop-types';
 
+const propTypes = {
+  children: PropTypes.string.isRequired,
+};
+
 const Divider = ({ children }) => {
   return (
     <>
@@ -11,8 +15,6 @@ const Divider = ({ children }) => {
   );
 };
 
-export default Divider;
+Divider.propTypes = propTypes;
 
-Divider.propTypes = {
-  children: PropTypes.string.isRequired,
-};
+export default Divider;

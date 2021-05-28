@@ -1,7 +1,7 @@
 import React from 'react';
 import '@styles/main.scss';
 import PropTypes from 'prop-types';
-import Button from './InteractiveParts/Button';
+import Button from '@components/InteractiveParts/Button';
 
 const propTypes = {
   buttonText: PropTypes.string.isRequired,

@@ -2,11 +2,10 @@ import cn from 'classnames';
 import React from 'react';
 import '@styles/main.scss';
 import { useForm } from 'react-hook-form';
-import Button from './InteractiveParts/Button';
-import Input from './InteractiveParts/Input';
-import CheckBoxGroup from './InteractiveParts/CheckBoxGroup';
+import Button from '@components/InteractiveParts/Button';
+import Input from '@components/InteractiveParts/Input';
 
-const LogInForm = () => {
+const RestorePasswordForm = () => {
   const {
     register,
     handleSubmit,
@@ -21,7 +20,6 @@ const LogInForm = () => {
     console.log(data);
     reset();
   };
-
   return (
     <form className="form" onSubmit={handleSubmit(onSubmit)}>
       <Input
@@ -37,20 +35,14 @@ const LogInForm = () => {
         placeholder="Email"
         error={errors.email?.message}
       />
-      <Input
-        className={cn('form__input form__input--password', { error: errors.password?.message })}
-        type="password"
-        {...register('password', {
-          required: 'Enter the password!',
-        })}
-        placeholder="Password"
-        error={errors.password?.message}
-      />
-      <Button className="form__forgot-password">Forgot password?</Button>
-      <CheckBoxGroup {...register('RememberMe')} labelText="Remember me" />
-      <Button>Continue</Button>
+      <Button>Send reset link</Button>
+      <div className="restore-password__button-wrapper">
+        <Button type="button" className="card__sign-button">
+          Back to Log in
+        </Button>
+      </div>
     </form>
   );
 };
 
-export default LogInForm;
+export default RestorePasswordForm;

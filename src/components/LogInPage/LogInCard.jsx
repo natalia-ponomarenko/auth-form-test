@@ -1,20 +1,25 @@
 import React from 'react';
-import CardHeading from '@components/CardHeading';
-import Divider from '@components/InteractiveParts/Divider';
+import LoginForm from '@components/LogInPage/LoginForm';
 import Button from '@components/InteractiveParts/Button';
-import SignInForm from './SignInForm';
+import CardHeading from '@components/InteractiveParts/CardHeading';
+import Divider from '@components/InteractiveParts/Divider';
 import '@styles/main.scss';
 
-const SignInCard = () => (
+const LogInCard = () => (
   <div className="card">
-    <CardHeading title="Sign in" subtitle="Already have an account?" buttonText="Log in" />
+    <CardHeading
+      title="Log in"
+      subtitle="Don't have an account?"
+      buttonText="Sign in"
+      route="/sign"
+    />
     <div className="card__button-wrapper">
       <Button className="card__button-google">Continue with Google</Button>
       <Button className="card__button-microsoft">Continue with Microsoft</Button>
     </div>
     <Divider>or</Divider>
-    <SignInForm />
+    <LoginForm />
   </div>
 );
 
-export default SignInCard;
+export default LogInCard;

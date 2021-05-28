@@ -4,7 +4,6 @@ import '@styles/main.scss';
 import { useForm } from 'react-hook-form';
 import Button from '@components/InteractiveParts/Button';
 import Input from '@components/InteractiveParts/Input';
-import eye from '@images/Vector.png';
 
 const SignInForm = () => {
   const {

@@ -1,10 +1,11 @@
+import '@styles/main.scss';
 import cn from 'classnames';
 import React from 'react';
-import '@styles/main.scss';
 import { useForm } from 'react-hook-form';
-import Button from './InteractiveParts/Button';
-import Input from './InteractiveParts/Input';
-import CheckBoxGroup from './InteractiveParts/CheckBoxGroup';
+import { Link } from 'react-router-dom';
+import Button from '../InteractiveParts/Button';
+import CheckBoxGroup from '../InteractiveParts/CheckBoxGroup';
+import Input from '../InteractiveParts/Input';
 
 const LogInForm = () => {
   const {
@@ -46,7 +47,9 @@ const LogInForm = () => {
         placeholder="Password"
         error={errors.password?.message}
       />
-      <Button className="form__forgot-password">Forgot password?</Button>
+      <Link to="/restore">
+        <Button className="form__forgot-password">Forgot password?</Button>
+      </Link>
       <CheckBoxGroup {...register('RememberMe')} labelText="Remember me" />
       <Button>Continue</Button>
     </form>

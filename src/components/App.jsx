@@ -1,14 +1,21 @@
-import React from 'react';
-import LogInCard from '@components/LogInCard';
-import SignInPage from '../SignUpPage/SignUpPage';
-import RestorePasswordPage from '../RestorePassword/RestorePasswordPage';
+import LogInCard from '@components/LogInPage/LogInCard';
 import '@styles/main.scss';
+import React from 'react';
+import { Route } from 'react-router-dom';
+import RestorePasswordPage from './RestorePasswordPage/RestorePasswordPage';
+import SignInPage from './SignUpPage/SignUpPage';
 
 const App = () => (
   <div className="container">
-    <LogInCard />
-    <SignInPage />
-    <RestorePasswordPage />
+    <Route path="/home">
+      <LogInCard />
+    </Route>
+    <Route path="/sign">
+      <SignInPage />
+    </Route>
+    <Route path="/restore">
+      <RestorePasswordPage />
+    </Route>
   </div>
 );
 

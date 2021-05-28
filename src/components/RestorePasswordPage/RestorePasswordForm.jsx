@@ -4,6 +4,7 @@ import '@styles/main.scss';
 import { useForm } from 'react-hook-form';
 import Button from '@components/InteractiveParts/Button';
 import Input from '@components/InteractiveParts/Input';
+import { Link } from 'react-router-dom';
 
 const RestorePasswordForm = () => {
   const {
@@ -37,9 +38,11 @@ const RestorePasswordForm = () => {
       />
       <Button>Send reset link</Button>
       <div className="restore-password__button-wrapper">
-        <Button type="button" className="card__sign-button">
-          Back to Log in
-        </Button>
+        <Link to="/home">
+          <Button type="button" className="card__sign-button" route="/home">
+            Back to Log in
+          </Button>
+        </Link>
       </div>
     </form>
   );

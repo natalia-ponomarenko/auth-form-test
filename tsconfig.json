@@ -3,7 +3,8 @@
   "paths": {
       "@images/*": ["images*"],
       "@styles/*": ["styles*"],
-      "@components/*": ["components*"]
+      "@components/*": ["components*"],
+      "@constants/*": ["constants*"]
   },
   "compilerOptions": {
     "target": "es5",

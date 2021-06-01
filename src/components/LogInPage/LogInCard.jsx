@@ -4,6 +4,7 @@ import Button from '@components/InteractiveParts/Button';
 import CardHeading from '@components/InteractiveParts/CardHeading';
 import Divider from '@components/InteractiveParts/Divider';
 import '@styles/main.scss';
+import { SIGN } from '@constants/path.constants';
 
 const LogInCard = () => (
   <div className="card">
@@ -11,7 +12,7 @@ const LogInCard = () => (
       title="Log in"
       subtitle="Don't have an account?"
       buttonText="Sign in"
-      route="/sign"
+      route={SIGN}
     />
     <div className="card__button-wrapper">
       <Button className="card__button-google">Continue with Google</Button>

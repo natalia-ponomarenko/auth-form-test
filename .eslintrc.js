@@ -11,6 +11,7 @@ module.exports = {
           '@images': 'src/images/',
           '@styles': 'src/styles/',
           '@components': 'src/components/',
+          '@constants': 'src/constants',
         },
         extensions: ['.js', '.jsx'],
       },

@@ -1,3 +1,4 @@
+import { RESTORE } from '@constants/path.constants';
 import '@styles/main.scss';
 import cn from 'classnames';
 import React from 'react';
@@ -47,7 +48,7 @@ const LogInForm = () => {
         placeholder="Password"
         error={errors.password?.message}
       />
-      <Link to="/restore">
+      <Link to={RESTORE}>
         <Button className="form__forgot-password">Forgot password?</Button>
       </Link>
       <CheckBoxGroup {...register('RememberMe')} labelText="Remember me" />

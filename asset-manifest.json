@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/auth-form-test/home/static/css/main.c2752177.chunk.css",
-    "main.js": "/auth-form-test/home/static/js/main.e7745965.chunk.js",
-    "main.js.map": "/auth-form-test/home/static/js/main.e7745965.chunk.js.map",
-    "runtime-main.js": "/auth-form-test/home/static/js/runtime-main.ea4e1c52.js",
-    "runtime-main.js.map": "/auth-form-test/home/static/js/runtime-main.ea4e1c52.js.map",
-    "static/js/2.fb2f5b32.chunk.js": "/auth-form-test/home/static/js/2.fb2f5b32.chunk.js",
-    "static/js/2.fb2f5b32.chunk.js.map": "/auth-form-test/home/static/js/2.fb2f5b32.chunk.js.map",
-    "index.html": "/auth-form-test/home/index.html",
-    "static/css/main.c2752177.chunk.css.map": "/auth-form-test/home/static/css/main.c2752177.chunk.css.map",
-    "static/js/2.fb2f5b32.chunk.js.LICENSE.txt": "/auth-form-test/home/static/js/2.fb2f5b32.chunk.js.LICENSE.txt",
-    "static/media/main.scss": "/auth-form-test/home/static/media/Microsoft_logo11.7c88460e.svg",
-    "static/media/check.a9d3074b.svg": "/auth-form-test/home/static/media/check.a9d3074b.svg"
+    "main.css": "/auth-form-test/static/css/main.602e1c96.chunk.css",
+    "main.js": "/auth-form-test/static/js/main.220b2e1d.chunk.js",
+    "main.js.map": "/auth-form-test/static/js/main.220b2e1d.chunk.js.map",
+    "runtime-main.js": "/auth-form-test/static/js/runtime-main.898eafd9.js",
+    "runtime-main.js.map": "/auth-form-test/static/js/runtime-main.898eafd9.js.map",
+    "static/js/2.fb2f5b32.chunk.js": "/auth-form-test/static/js/2.fb2f5b32.chunk.js",
+    "static/js/2.fb2f5b32.chunk.js.map": "/auth-form-test/static/js/2.fb2f5b32.chunk.js.map",
+    "index.html": "/auth-form-test/index.html",
+    "static/css/main.602e1c96.chunk.css.map": "/auth-form-test/static/css/main.602e1c96.chunk.css.map",
+    "static/js/2.fb2f5b32.chunk.js.LICENSE.txt": "/auth-form-test/static/js/2.fb2f5b32.chunk.js.LICENSE.txt",
+    "static/media/main.scss": "/auth-form-test/static/media/Microsoft_logo11.7c88460e.svg",
+    "static/media/check.a9d3074b.svg": "/auth-form-test/static/media/check.a9d3074b.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.ea4e1c52.js",
+    "static/js/runtime-main.898eafd9.js",
     "static/js/2.fb2f5b32.chunk.js",
-    "static/css/main.c2752177.chunk.css",
-    "static/js/main.e7745965.chunk.js"
+    "static/css/main.602e1c96.chunk.css",
+    "static/js/main.220b2e1d.chunk.js"
   ]
 }

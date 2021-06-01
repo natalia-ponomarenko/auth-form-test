@@ -1,9 +1,10 @@
-import React from 'react';
+import Button from '@components/InteractiveParts/Button';
 import CardHeading from '@components/InteractiveParts/CardHeading';
 import Divider from '@components/InteractiveParts/Divider';
-import Button from '@components/InteractiveParts/Button';
-import SignInForm from './SignInForm';
+import { HOME } from '@constants/path.constants';
 import '@styles/main.scss';
+import React from 'react';
+import SignInForm from './SignInForm';
 
 const SignInCard = () => (
   <div className="card">
@@ -11,7 +12,7 @@ const SignInCard = () => (
       title="Sign in"
       subtitle="Already have an account?"
       buttonText="Log in"
-      route="/home"
+      route={HOME}
     />
     <div className="card__button-wrapper">
       <Button className="card__button-google">Continue with Google</Button>

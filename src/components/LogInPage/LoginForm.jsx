@@ -48,7 +48,7 @@ const LogInForm = () => {
         placeholder="Password"
         error={errors.password?.message}
       />
-      <Link to={RESTORE}>
+      <Link to={RESTORE} replace>
         <Button className="form__forgot-password">Forgot password?</Button>
       </Link>
       <CheckBoxGroup {...register('RememberMe')} labelText="Remember me" />

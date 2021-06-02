@@ -25,7 +25,7 @@ const CardHeading = ({ title, subtitle, onClick, buttonText, route }) => (
     <div className="card__title">{title}</div>
     <div className="card__subtitle-wrapper">
       <div className="card__subtitle">{subtitle}</div>
-      <Link to={route}>
+      <Link to={route} replace>
         <Button type="button" className="card__sign-button" onClick={onClick}>
           {buttonText}
         </Button>

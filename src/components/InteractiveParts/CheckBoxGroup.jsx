@@ -1,7 +1,6 @@
 import React, { forwardRef } from 'react';
 import '@styles/main.scss';
 import PropTypes from 'prop-types';
-import check from '@images/check.svg';
 
 const propTypes = {
   name: PropTypes.string.isRequired,
@@ -24,9 +23,6 @@ const CheckboxGroup = forwardRef(({ name, labelText, ...props }, ref) => (
         className="form__checkmark"
         ref={ref}
       />
-      <div className="form__container">
-        <img src={check} alt="checkmark" className="form__icon" />
-      </div>
       {labelText}
     </label>
   </div>

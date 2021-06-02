@@ -7,7 +7,7 @@
 
 # Links
 
-- [DEMO LINK](https://natalia-ponomarenko.github.io/auth-form-test/home)
+- [DEMO LINK](https://natalia-ponomarenko.github.io/auth-form-test)
 
 - [Code](https://github.com/natalia-ponomarenko/auth-form-test)
 - [Figma](https://www.figma.com/file/RkOUnhCQ4fydOnRzuXd6SW/Test-Task?node-id=514%3A78)

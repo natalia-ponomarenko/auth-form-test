@@ -1,21 +1,24 @@
 import LogInCard from '@components/LogInPage/LogInCard';
 import '@styles/main.scss';
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import RestorePasswordPage from './RestorePasswordPage/RestorePasswordPage';
 import SignInPage from './SignUpPage/SignUpPage';
 
 const App = () => (
   <div className="container">
     <Switch>
-      <Route path="/home">
+      <Route exact path="/home">
         <LogInCard />
       </Route>
-      <Route path="/sign">
+      <Route exact path="/sign">
         <SignInPage />
       </Route>
-      <Route path="/restore">
+      <Route exact path="/restore">
         <RestorePasswordPage />
+      </Route>
+      <Route exact path="/">
+        <Redirect to="/home" />
       </Route>
     </Switch>
   </div>

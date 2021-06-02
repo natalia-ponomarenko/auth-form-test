@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/auth-form-test/home/static/css/main.c2c60c8d.chunk.css",
-    "main.js": "/auth-form-test/home/static/js/main.af932f3a.chunk.js",
-    "main.js.map": "/auth-form-test/home/static/js/main.af932f3a.chunk.js.map",
-    "runtime-main.js": "/auth-form-test/home/static/js/runtime-main.ea4e1c52.js",
-    "runtime-main.js.map": "/auth-form-test/home/static/js/runtime-main.ea4e1c52.js.map",
-    "static/js/2.a4f067f8.chunk.js": "/auth-form-test/home/static/js/2.a4f067f8.chunk.js",
-    "static/js/2.a4f067f8.chunk.js.map": "/auth-form-test/home/static/js/2.a4f067f8.chunk.js.map",
-    "index.html": "/auth-form-test/home/index.html",
-    "static/css/main.c2c60c8d.chunk.css.map": "/auth-form-test/home/static/css/main.c2c60c8d.chunk.css.map",
-    "static/js/2.a4f067f8.chunk.js.LICENSE.txt": "/auth-form-test/home/static/js/2.a4f067f8.chunk.js.LICENSE.txt",
-    "static/media/main.scss": "/auth-form-test/home/static/media/Microsoft_logo11.7c88460e.svg"
+    "main.css": "/auth-form-test/static/css/main.84ff3b35.chunk.css",
+    "main.js": "/auth-form-test/static/js/main.af932f3a.chunk.js",
+    "main.js.map": "/auth-form-test/static/js/main.af932f3a.chunk.js.map",
+    "runtime-main.js": "/auth-form-test/static/js/runtime-main.898eafd9.js",
+    "runtime-main.js.map": "/auth-form-test/static/js/runtime-main.898eafd9.js.map",
+    "static/js/2.a4f067f8.chunk.js": "/auth-form-test/static/js/2.a4f067f8.chunk.js",
+    "static/js/2.a4f067f8.chunk.js.map": "/auth-form-test/static/js/2.a4f067f8.chunk.js.map",
+    "index.html": "/auth-form-test/index.html",
+    "static/css/main.84ff3b35.chunk.css.map": "/auth-form-test/static/css/main.84ff3b35.chunk.css.map",
+    "static/js/2.a4f067f8.chunk.js.LICENSE.txt": "/auth-form-test/static/js/2.a4f067f8.chunk.js.LICENSE.txt",
+    "static/media/main.scss": "/auth-form-test/static/media/Microsoft_logo11.7c88460e.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.ea4e1c52.js",
+    "static/js/runtime-main.898eafd9.js",
     "static/js/2.a4f067f8.chunk.js",
-    "static/css/main.c2c60c8d.chunk.css",
+    "static/css/main.84ff3b35.chunk.css",
     "static/js/main.af932f3a.chunk.js"
   ]
 }

@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import React from 'react';
+import React, { useState } from 'react';
 import '@styles/main.scss';
 import { useForm } from 'react-hook-form';
 import Button from '@components/InteractiveParts/Button';
@@ -15,9 +15,11 @@ const RestorePasswordForm = () => {
     formState: { errors },
     reset,
   } = useForm();
+  const [messageSuccess, setMessageSuccess] = useState(false);
 
   const onSubmit = (data) => {
     console.log(data);
+    setMessageSuccess(true);
     reset();
   };
   return (
@@ -35,6 +37,7 @@ const RestorePasswordForm = () => {
         placeholder="Email"
         error={errors.email?.message}
       />
+      {messageSuccess && <div className="form__message message">Check the email for link!</div>}
       <Button>Send reset link</Button>
       <div className="restore-password__button-wrapper">
         <Link to={HOME}>

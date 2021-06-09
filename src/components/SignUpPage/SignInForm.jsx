@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import React from 'react';
+import React, { useState } from 'react';
 import '@styles/main.scss';
 import { useForm } from 'react-hook-form';
 import Button from '@components/InteractiveParts/Button';
@@ -12,12 +12,14 @@ const SignInForm = () => {
     formState: { errors },
     reset,
   } = useForm();
+  const [messageSuccess, setMessageSuccess] = useState(false);
 
   const emailValidationRegExp =
     /^[a-zA-Z0-9.!#$%&"*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
   const onSubmit = (data) => {
     console.log(data);
+    setMessageSuccess(true);
     reset();
   };
 
@@ -61,6 +63,7 @@ const SignInForm = () => {
           placeholder="Password"
           error={errors.password?.message}
         />
+        {messageSuccess && <div className="signIn__message message">Thank you for signing in!</div>}
         <Button>Continue</Button>
       </form>
       <div className="signIn__paragraph">

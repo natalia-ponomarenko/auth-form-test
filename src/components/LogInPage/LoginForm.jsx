@@ -1,7 +1,7 @@
 import { RESTORE } from '@constants/path.constants';
 import '@styles/main.scss';
 import cn from 'classnames';
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import Button from '../InteractiveParts/Button';
@@ -15,12 +15,14 @@ const LogInForm = () => {
     formState: { errors },
     reset,
   } = useForm();
+  const [messageSuccess, setMessageSuccess] = useState(false);
 
   const emailValidationRegExp =
     /^[a-zA-Z0-9.!#$%&"*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
   const onSubmit = (data) => {
     console.log(data);
+    setMessageSuccess(true);
     reset();
   };
 
@@ -48,6 +50,7 @@ const LogInForm = () => {
         placeholder="Password"
         error={errors.password?.message}
       />
+      {messageSuccess && <div className="form__message message">Successfully submitted!</div>}
       <Link to={RESTORE} replace>
         <Button className="form__forgot-password">Forgot password?</Button>
       </Link>
